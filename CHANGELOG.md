@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.0]() (2025-07-11)
+
+### Features
+
+* Change modules source to c0x12c terraform registry
+
 ## [0.3.9]() (2025-04-08)
 
 ### Features
