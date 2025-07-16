@@ -301,7 +301,7 @@ variable "coredns" {
   description = "Configuration for CoreDNS add-on"
   type = object({
     replica_count = optional(number, 1)
-    node_selector = optional(map(string), null)
+    node_selector = optional(map(string), {})
     tolerations = optional(list(object({
       key      = string
       operator = string
@@ -311,7 +311,7 @@ variable "coredns" {
   })
   default = {
     replica_count = 1
-    node_selector = null
+    node_selector = {}
     tolerations   = []
   }
 }
@@ -320,7 +320,7 @@ variable "efs_csi" {
   description = "Configuration for EFS CSI add-on"
   type = object({
     replica_count = optional(number, 1)
-    node_selector = optional(map(string), null)
+    node_selector = optional(map(string), {})
     tolerations = optional(list(object({
       key      = string
       operator = string
@@ -330,7 +330,7 @@ variable "efs_csi" {
   })
   default = {
     replica_count = 1
-    node_selector = null
+    node_selector = {}
     tolerations   = []
   }
 }
