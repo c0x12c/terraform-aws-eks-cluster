@@ -16,7 +16,7 @@ This module will create the components below
 ```hcl
 module "eks" {
   source  = "c0x12c/eks-cluster/aws"
-  version = "1.0.0"
+  version = "1.0.1"
 
   region          = "us-west-2"
   environment     = "test"

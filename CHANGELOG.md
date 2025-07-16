@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1]() (2025-07-16)
+
+### Bug fixes
+
+* Fix the `node_selector` and `tolerations` variables for EFS CSI add-on default to empty values
+
 ## [1.0.0]() (2025-07-11)
 
 ### Features
