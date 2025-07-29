@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.2]() (2025-07-29)
+
+### Features
+
+* dependabot bump c0x12c/eks-datadog-rbac/aws to 1.2.0
+
 ## [1.0.1]() (2025-07-16)
 
 ### Bug fixes
