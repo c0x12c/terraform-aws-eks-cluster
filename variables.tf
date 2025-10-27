@@ -334,3 +334,9 @@ variable "efs_csi" {
     tolerations   = []
   }
 }
+
+variable "node_group_version" {
+  type        = string
+  description = "Kubernetes version for the managed node group"
+  default     = null
+}
