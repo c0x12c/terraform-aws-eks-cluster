@@ -338,5 +338,5 @@ variable "efs_csi" {
 variable "node_group_version" {
   type        = string
   description = "Kubernetes version for the managed node group"
-  default     = null
+  default     = "1.32"
 }
