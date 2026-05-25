@@ -297,6 +297,23 @@ variable "enabled_karpenter" {
   default     = false
 }
 
+variable "kube_proxy" {
+  description = "Configuration for kube-proxy add-on"
+  type = object({
+    node_selector = optional(map(string), {})
+    tolerations = optional(list(object({
+      key      = string
+      operator = string
+      value    = optional(string)
+      effect   = optional(string)
+    })), [])
+  })
+  default = {
+    node_selector = {}
+    tolerations   = []
+  }
+}
+
 variable "coredns" {
   description = "Configuration for CoreDNS add-on"
   type = object({

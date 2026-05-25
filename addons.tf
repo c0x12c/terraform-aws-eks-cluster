@@ -27,6 +27,11 @@ resource "aws_eks_addon" "kube_proxy" {
   resolve_conflicts_on_update = "OVERWRITE"
   resolve_conflicts_on_create = "OVERWRITE"
 
+  configuration_values = jsonencode({
+    nodeSelector = var.kube_proxy.node_selector
+    tolerations  = var.kube_proxy.tolerations
+  })
+
   depends_on = [aws_eks_cluster.master]
 }
 

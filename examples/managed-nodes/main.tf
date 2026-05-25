@@ -44,6 +44,20 @@ module "eks" {
   administrator_role_arn = null
   aws_auth_users         = []
 
+  kube_proxy = {
+    node_selector = {
+      "service-type" = "backbone"
+    }
+    tolerations = [
+      {
+        key      = "service-type"
+        value    = "backbone"
+        effect   = "NoSchedule"
+        operator = "Equal"
+      }
+    ]
+  }
+
   coredns = {
     replica_count = 1
     node_selector = {

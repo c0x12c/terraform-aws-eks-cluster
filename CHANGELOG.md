@@ -1,6 +1,11 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+## [1.1.0]() (2026-05-25)
+
+### Features
+
+* Add the kube-proxy `node_selector` and `tolerations` configuration via the `kube_proxy` variable
 
 ## [1.0.2]() (2025-10-27)
 
